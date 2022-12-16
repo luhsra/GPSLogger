@@ -17,7 +17,6 @@ libsra_ar = libsra_proj.get_variable('libsra_ar')
 default_linkerscript = libsra_proj.get_variable('default_linkerscript')
 
 fs = import('fs')
-gcc_version = files('gcc_version.py')
 
 # Python
 py3_mod = import('python')
@@ -63,6 +62,7 @@ foreach prog_name : ['ar', 'ld']
     set_variable(prog_name, prog)
 endforeach
 
+subdir('tools')
 subdir('settings')
 
 gpslogger_dir = meson.current_source_dir()
