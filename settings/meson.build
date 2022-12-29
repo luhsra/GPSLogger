@@ -96,7 +96,6 @@ elif get_option('arch') == 'arm'
 
 
   llc_flags += ['--frame-pointer=none']
-  message('SET LLC_flags')
 else
   error('unknown arch ' + get_option('arch'))
 endif

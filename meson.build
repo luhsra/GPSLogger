@@ -11,8 +11,7 @@ libsra_includes = libsra_proj.get_variable('libs_includes')
 
 # transfer to Parrot
 freertos_src_list = freertos_proj.get_variable('freertos_src_list')
-libfreertos_src_dir = freertos_proj.get_variable('libfreertos_src_dir')
-libfreertos_src_dir_for_port_c = freertos_proj.get_variable('libfreertos_src_dir_for_port_c')
+libfreertos_src_vanilla = freertos_proj.get_variable('libfreertos_src_vanilla')
 libsra_ar = libsra_proj.get_variable('libsra_ar')
 default_linkerscript = libsra_proj.get_variable('default_linkerscript')
 
