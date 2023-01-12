@@ -6,7 +6,7 @@ project('gpslogger', 'cpp',
 freertos_proj = subproject('freertos')
 freertos_includes = freertos_proj.get_variable('freertos_includes')
 
-libsra_proj = subproject('libsra')
+libsra_proj = subproject('ara-libsra')
 libsra_includes = libsra_proj.get_variable('libs_includes')
 
 # transfer to Parrot
