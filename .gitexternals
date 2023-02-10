@@ -1,6 +1,6 @@
 [external "ara-libsra"]
 	path = subprojects/ara-libsra
-	url = https://scm.sra.uni-hannover.de/research/ara-libsra
+	url = git@scm.sra.uni-hannover.de:research/ara-libsra.git
 	branch = main
 	vcs = git
 
@@ -12,6 +12,6 @@
 
 [external "freertos"]
 	path = subprojects/freertos
-	url = https://scm.sra.uni-hannover.de/research/freertos
+	url = git@scm.sra.uni-hannover.de:research/freertos.git
 	branch = ara
 	vcs = git
