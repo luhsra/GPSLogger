@@ -1,5 +1,0 @@
-[wrap-git]
-url = https://scm.sra.uni-hannover.de/published/ara-link.git
-push-url = git@scm.sra.uni-hannover.de:published/ara-link.git
-revision = master
-depth = 1

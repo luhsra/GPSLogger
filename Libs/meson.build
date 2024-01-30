@@ -1,4 +1,3 @@
-gpslogger_libs = []
 subdir('NeoGPS')
 subdir('AdafruitGFX')
 subdir('Adafruit_SSD1306')
