@@ -8,7 +8,7 @@ arm_enabled = toolchains.get_variable('arm_enabled')
 assert(arm_enabled, 'The GPSLogger can only be build with an ARM toolchain.')
 
 clang = toolchains.get_variable('clang')
-ara_link = toolchains.get_variable('ara_link')
+llvm_link_cmd = toolchains.get_variable('llvm_link_cmd')
 
 libplatforms = subproject('ara-libplatforms')
 clang_base = libplatforms.get_variable('clang_base')
@@ -18,8 +18,6 @@ ir_flags = libplatforms.get_variable('ir_flags')
 clang_flags = libplatforms.get_variable('clang_flags')
 arm_clang_flags = libplatforms.get_variable('arm_clang_flags')
 arm_ld_flags = libplatforms.get_variable('arm_ld_flags')
-
-llvm_link_cmd = [ara_link, '-S', '-o', '@OUTPUT@', '@INPUT@']
 
 freertos_proj = subproject('freertos')
 freertos_includes = []
