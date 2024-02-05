@@ -3,6 +3,8 @@ project('gpslogger', 'cpp',
                        'cpp_std=c++17',
                        'buildtype=debugoptimized'])
 
+fs = import('fs')
+
 toolchains = subproject('toolchains')
 arm_enabled = toolchains.get_variable('arm_enabled')
 assert(arm_enabled, 'The GPSLogger can only be build with an ARM toolchain.')
@@ -114,3 +116,5 @@ gpslogger_application = custom_target('gpslogger_app.ll',
   command: llvm_link_cmd,
   build_by_default: true
 )
+
+freertos_config = fs.copyfile(freertos_proj.get_variable('default_config'), 'FreeRTOSConfig.h')
