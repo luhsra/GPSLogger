@@ -121,3 +121,6 @@ gpslogger_application = custom_target('gpslogger_app.ll',
 )
 
 freertos_config = fs.copyfile(freertos_proj.get_variable('default_config'), 'FreeRTOSConfig.h')
+
+cloc_app = [here / 'Src']
+cloc_lib = [here / 'Libs']
