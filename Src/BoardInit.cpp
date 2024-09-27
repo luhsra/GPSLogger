@@ -17,7 +17,7 @@ extern "C" void _init(void)  {}
 unsigned long __errno;
 
 // Set up board clocks
-void SystemClock_Config(void)
+extern "C" void SystemClock_Config(void)
 {
 	// Set up external oscillator to 72 MHz
 	RCC_OscInitTypeDef RCC_OscInitStruct;

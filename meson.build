@@ -53,6 +53,13 @@ gpslogger_cflags = [
   '-Wno-typedef-redefinition',
   '-DENABLE_ARDUINO_FEATURES=0',
   '-ffast-math',
+  '-fno-builtin',
+  '-fno-threadsafe-statics',
+  '-fomit-frame-pointer',
+  '-fshort-enums',
+  # llvm do not understand specs
+  # '-specs=nano.specs',
+  # '-specs=nosys.specs',
 ]
 
 
@@ -120,7 +127,7 @@ gpslogger_application = custom_target('gpslogger_app.ll',
   build_by_default: true
 )
 
-freertos_config = fs.copyfile(freertos_proj.get_variable('default_config'), 'FreeRTOSConfig.h')
+freertos_config = files('Libs/FreeRTOS/FreeRTOSConfig.h')[0]
 
 cloc_app = [here / 'Src']
 cloc_lib = [here / 'Libs']

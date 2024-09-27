@@ -2,6 +2,12 @@ src_files= [
   'abi.cpp',
   'Print.cpp',
   'Stream.cpp',
+  # 'WString.cpp',
+]
+
+c_src_files = [
+  # 'dtostrf.c',
+  'stm32/stm32_init.c'
 ]
 
 libarduino_targets = []
@@ -9,7 +15,9 @@ foreach file : src_files
   libarduino_targets += gpslogger_compilepp.process(file)
 endforeach
 
-libarduino_targets += gpslogger_compile.process('stm32/stm32_init.c')
+foreach file : c_src_files
+  libarduino_targets += gpslogger_compile.process(file)
+endforeach
 
 
 libarduino = custom_target('libarduino-link',
